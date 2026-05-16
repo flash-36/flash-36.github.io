@@ -4,85 +4,280 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ujwal Dinesha</title>
+    <meta name="description" content="Ujwal Dinesha — Ph.D. Candidate at Texas A&M. Reinforcement Learning, LLM Post-Training, and Bandit Algorithms.">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Ujwal Dinesha</h1>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#research">Research</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav class="topnav">
+        <a href="#top" class="brand">UD</a>
+        <div class="links">
+            <a href="#about">about</a>
+            <a href="#research">research</a>
+            <a href="#patents">patents</a>
+            <a href="#experience">experience</a>
+            <a href="#contact">contact</a>
+        </div>
+    </nav>
+
     <main>
-        <section id="home">
-            <h2>Welcome!</h2>
-            <img src="profile.jpg" alt="Picture of Ujwal Dinesha" style="max-width: 200px; border-radius: 50%;">
-            <p>Ph.D. Candidate in Computer Engineering | Reinforcement Learning and Bandit Algorithms</p>
-            <p>Welcome to my personal website where I plan on showcasing my work (as best I can). In the future I plan on using manim to create concise explainers for each of my work. </p>
-             <p style="color: gray; font-style: italic;">[Site still under construction but usable :) ]</p>
-</section>
+        <section id="top" class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">Ph.D. Candidate · Texas A&amp;M University</p>
+                <h1>Ujwal Dinesha</h1>
+                <p class="tagline">
+                    I work on <strong>reinforcement learning</strong> &mdash; from post-training large language models
+                    to learning policies for restless bandits and robots. Advised by
+                    <a href="https://cesg.tamu.edu/faculty/srinivas-shakkottai/" target="_blank" rel="noopener">Dr. Srinivas Shakkottai</a>.
+                </p>
+                <p class="meta">
+                    <span>Austin, TX</span>
+                    <span class="dot"></span>
+                    <span>ujwald36@tamu.edu</span>
+                </p>
+                <div class="socials">
+                    <a href="mailto:ujwald36@tamu.edu" class="btn">Email</a>
+                    <a href="https://scholar.google.com/citations?user=ujwald" target="_blank" rel="noopener" class="btn">Scholar</a>
+                    <a href="https://linkedin.com/in/ujwal-dinesha" target="_blank" rel="noopener" class="btn">LinkedIn</a>
+                    <a href="https://github.com/flash-36" target="_blank" rel="noopener" class="btn">GitHub</a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                <img src="Ujwal.jpg" alt="Portrait of Ujwal Dinesha">
+            </div>
         </section>
-        
+
         <section id="about">
-            <h2>About Me</h2>
-            <p>I am a Ph.D. candidate at Texas A&M University, specializing in reinforcement learning. My academic journey includes a Master’s from Columbia University and a Bachelor’s from the National Institute of Engineering, Mysuru.</p>
-            <ul>
-                <li><strong>Technical Skills:</strong> Python, PyTorch, TorchRL, Hugging Face, Weights & Biases, Slurm, Ray RLlib</li>
-                <li><strong>Coursework:</strong> Reinforcement Learning, Advanced Convex Optimization, Bandit Algorithms, Stochastic Systems, Analysis of Algorithms, Intro to Classical Analysis, Brain-Computer Interfaces</li>
-            </ul>
+            <h2>About</h2>
+            <p>
+                I&rsquo;m a fourth-year Ph.D. candidate in Computer Engineering at Texas A&amp;M, where I think a lot about
+                how learning agents make decisions under uncertainty. Lately that&rsquo;s meant chasing two threads in
+                parallel: <em>aligning</em> large language models cheaply at inference time, and <em>learning</em>
+                index policies for restless bandits with only preference feedback.
+            </p>
+            <p>
+                Before A&amp;M, I picked up an M.S. in Electrical Engineering at <a href="https://www.columbia.edu" target="_blank" rel="noopener">Columbia University</a>
+                and a B.E. at the <a href="https://nie.ac.in" target="_blank" rel="noopener">National Institute of Engineering, Mysuru</a>. I&rsquo;ve also done research
+                internships at <a href="https://www.typeface.ai" target="_blank" rel="noopener">Typeface AI</a>, <a href="https://www.interdigital.com" target="_blank" rel="noopener">InterDigital</a>, and <a href="https://www.roche.com" target="_blank" rel="noopener">Roche</a>.
+            </p>
+            <div class="skills">
+                <span class="chip">Python</span>
+                <span class="chip">PyTorch</span>
+                <span class="chip">Hugging Face</span>
+                <span class="chip">vLLM</span>
+                <span class="chip">TorchRL</span>
+                <span class="chip">RLHF</span>
+                <span class="chip">Preference Optimization</span>
+                <span class="chip">LLM Post-Training</span>
+                <span class="chip">Inference-Time Alignment</span>
+                <span class="chip">Bandits / RMABs</span>
+                <span class="chip">Multi-Agent RL</span>
+                <span class="chip">Distributed GPU / HPC</span>
+                <span class="chip">Slurm</span>
+                <span class="chip">W&amp;B</span>
+                <span class="chip">LaTeX</span>
+            </div>
         </section>
+
         <section id="research">
             <h2>Research</h2>
-            <h3>Publications</h3>
-            <ul>
-                <li><a href="https://nips.cc/virtual/2024/poster/96880">Risk-Averse Finetuning of Large Language Models (NeurIPS 2024)</a></li>
-                <li><a href="https://ieeexplore.ieee.org/document/10621216">A Multi-Agent View of Wireless Video Streaming (INFOCOM 2024)</a></li>
-                <li><a href="https://www.usenix.org/conference/nsdi24/presentation/ko">EdgeRIC: Empowering Real-time Intelligent Optimization (NSDI 2024)</a></li>
-            </ul>
-            <h3>Patents</h3>
-            <ul>
-                <li><a href="https://patents.google.com/patent/WO2024064329A1/en">Reinforcement Learning-based Rate Control for Neural Video Compression</a></li>
-                <li><a href="https://patents.google.com/patent/WO2023122077A1/en">Temporal Attention-Based Neural Networks for Video Compression</a></li>
-                <li><a href="https://patents.google.com/patent/WO2024049627A1/en">Video Compression for Both Machine and Human Consumption Using a Hybrid Framework</a></li>
-                <li><a href="https://patents.google.com/patent/US20240267794A1/en">Intelligent Control for Cellular Radio Access Networks</a></li>
+            <p class="section-intro">
+                Selected publications, each with a short writeup. Click any entry to expand the blog-style notes.
+            </p>
+
+            <article class="paper">
+                <details>
+                    <summary>
+                        <div class="paper-head">
+                            <span class="venue">arXiv · 2025</span>
+                            <h3>PITA: Preference-Guided Inference-Time Alignment for LLM Post-Training</h3>
+                            <p class="authors">S. C. Bobbili, <strong>U. Dinesha</strong>, D. Narasimha, S. Shakkottai</p>
+                            <div class="paper-links">
+                                <a href="https://arxiv.org/abs/2507.20067" target="_blank" rel="noopener">Paper</a>
+                                <a href="https://github.com/flash-36/PITA" target="_blank" rel="noopener">Code</a>
+                                <span class="expand-hint">Read notes &darr;</span>
+                            </div>
+                        </div>
+                    </summary>
+                    <div class="writeup">
+                        <p><strong>TL;DR.</strong> Most alignment pipelines stack two fragile pieces &mdash; fit a reward model on noisy preference data, then fine-tune the LLM against it. PITA throws both out. We learn a small <em>guidance policy</em> that nudges the base model&rsquo;s next-token distribution at inference time, directly from preferences, with zero LLM fine-tuning.</p>
+                        <p>The trick is to frame alignment as identifying a latent preference distribution and solve it with stochastic search. The guidance model produces exponentially-weighted Q-values that re-shape the LLM&rsquo;s logits on the fly. The result: a much cheaper alignment recipe that side-steps reward-model instability.</p>
+                        <p>We test PITA on math reasoning, TL;DR summarization, and sentiment control. The base LLM stays frozen the whole time &mdash; you can swap it out, swap the guidance policy in, and keep going.</p>
+                    </div>
+                </details>
+            </article>
+
+            <article class="paper">
+                <details>
+                    <summary>
+                        <div class="paper-head">
+                            <span class="venue">ICLR · 2025</span>
+                            <h3>DOPL: Direct Online Preference Learning for Restless Bandits with Preference Feedback</h3>
+                            <p class="authors">G. Xiong, <strong>U. Dinesha</strong>, D. Mukherjee, J. Li, S. Shakkottai</p>
+                            <div class="paper-links">
+                                <a href="https://arxiv.org/abs/2410.05527" target="_blank" rel="noopener">Paper</a>
+                                <a href="https://github.com/flash-36/DOPL" target="_blank" rel="noopener">Code</a>
+                                <a href="https://iclr.cc/virtual/2025/poster/31121" target="_blank" rel="noopener">Poster</a>
+                                <span class="expand-hint">Read notes &darr;</span>
+                            </div>
+                        </div>
+                    </summary>
+                    <div class="writeup">
+                        <p><strong>TL;DR.</strong> Restless multi-armed bandits (RMABs) usually assume the decision-maker observes a clean scalar reward when they pull an arm. In the real world &mdash; healthcare, online ads, app engagement &mdash; you almost never get that. You get <em>which option did the user prefer</em>. DOPL is the first online algorithm for RMABs in this setting with provable regret.</p>
+                        <p>We introduce <em>Pref-RMAB</em>, where the planner sees only pairwise preference feedback between activated arms. DOPL interleaves exploration of the unknown transition kernels with preference-data collection, then plans directly against preferences instead of trying to reconstruct rewards. The analysis lands at &Otilde;(&radic;(T &middot; ln T)) regret.</p>
+                        <p>Practically, we show it works on three benchmark domains &mdash; a CPAP adherence model, the Armman maternal-health setup, and an app-marketing engagement environment. Codebase is built around a config-driven runner so it&rsquo;s easy to plug in your own RMAB environment.</p>
+                    </div>
+                </details>
+            </article>
+
+            <article class="paper">
+                <details>
+                    <summary>
+                        <div class="paper-head">
+                            <span class="venue">NeurIPS · 2024</span>
+                            <h3>Risk-Averse Finetuning of Large Language Models</h3>
+                            <p class="authors">S. Chaudhary, <strong>U. Dinesha</strong>, D. Kalathil, S. Shakkottai</p>
+                            <div class="paper-links">
+                                <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/c182ec594f38926b7fcb827635b9a8f4-Abstract-Conference.html" target="_blank" rel="noopener">Paper</a>
+                                <a href="https://github.com/SapanaChaudhary/RA-RLHF" target="_blank" rel="noopener">Code</a>
+                                <a href="https://nips.cc/virtual/2024/poster/96880" target="_blank" rel="noopener">Poster</a>
+                                <span class="expand-hint">Read notes &darr;</span>
+                            </div>
+                        </div>
+                    </summary>
+                    <div class="writeup">
+                        <p><strong>TL;DR.</strong> Standard RLHF maximizes <em>expected</em> reward, so it&rsquo;s perfectly happy with a model that&rsquo;s great on average but occasionally spits out something toxic. RA-RLHF swaps the objective for <em>Conditional Value at Risk</em> &mdash; the average reward of the worst-&alpha; tail &mdash; which directly punishes those rare bad generations.</p>
+                        <p>The fix is surprisingly clean: at each PPO step, we sort the batch by reward and weight the tail more aggressively. No new architecture, no new reward model, drop-in over TRL.</p>
+                        <p>On IMDB sentiment-control and Jigsaw toxicity-mitigation benchmarks, RA-RLHF cuts the rate of toxic / off-target outputs without giving up on the generation quality you&rsquo;d get from vanilla RLHF.</p>
+                    </div>
+                </details>
+            </article>
+
+            <article class="paper">
+                <details>
+                    <summary>
+                        <div class="paper-head">
+                            <span class="venue">INFOCOM · 2024</span>
+                            <h3>A Multi-Agent View of Wireless Video Streaming with Delayed Client-Feedback</h3>
+                            <p class="authors">N. Khan, <strong>U. Dinesha</strong>, S. Arunachalam, D. Narasimha, V. Subramanian, S. Shakkottai</p>
+                            <div class="paper-links">
+                                <a href="https://ieeexplore.ieee.org/document/10621216" target="_blank" rel="noopener">Paper</a>
+                                <a href="https://par.nsf.gov/servlets/purl/10488319" target="_blank" rel="noopener">PDF</a>
+                                <span class="expand-hint">Read notes &darr;</span>
+                            </div>
+                        </div>
+                    </summary>
+                    <div class="writeup">
+                        <p><strong>TL;DR.</strong> A base station is streaming video to <em>N</em> devices over a shared wireless link with a tight energy budget. Each device&rsquo;s buffer / channel state arrives back at the BS with a deterministic delay. That delay is the whole problem &mdash; the controller is acting on stale information.</p>
+                        <p>We cast this as a cooperative multi-agent constrained POMDP and use strong duality to split it into <em>N</em> independent transmitter-receiver pairs that all share a single Lagrange multiplier (the energy price). Each pair is then solved using the common-information approach with approximate information states.</p>
+                        <p>The neural architecture that drops out of this analysis is delay-aware by construction and beats transmitter-only baselines in simulation. It&rsquo;s a nice example of how a careful POMDP decomposition can give you tractable learning where the naive joint problem would be hopeless.</p>
+                    </div>
+                </details>
+            </article>
+
+            <article class="paper">
+                <details>
+                    <summary>
+                        <div class="paper-head">
+                            <span class="venue">NSDI · 2024</span>
+                            <h3>EdgeRIC: Empowering Real-time Intelligent Optimization and Control in NextG Cellular Networks</h3>
+                            <p class="authors">W. H. Ko, U. Ghosh, <strong>U. Dinesha</strong>, R. Wu, S. Shakkottai, D. Bharadia</p>
+                            <div class="paper-links">
+                                <a href="https://www.usenix.org/conference/nsdi24/presentation/ko" target="_blank" rel="noopener">Paper</a>
+                                <a href="https://github.com/ucsdwcsng/EdgeRIC-A-real-time-RIC" target="_blank" rel="noopener">Code</a>
+                                <a href="https://edgeric.github.io/" target="_blank" rel="noopener">Site</a>
+                                <span class="expand-hint">Read notes &darr;</span>
+                            </div>
+                        </div>
+                    </summary>
+                    <div class="writeup">
+                        <p><strong>TL;DR.</strong> Open RAN&rsquo;s near-real-time RIC sits in the cloud and takes &gt; 15 ms to decide anything. That&rsquo;s far too slow for per-TTI scheduling in a real cell. EdgeRIC pushes the RIC down to the edge, co-located with the DU, and gets the decision loop under 1 ms.</p>
+                        <p>The system exposes a real-time E2 interface (we call it RT-E2) built on ZMQ + protobuf, with TTI-level synchronization and per-UE KPI reports. Above that we run <em>&mu;Apps</em> &mdash; small policies, including a PPO-trained MAC scheduler &mdash; that can react fast enough to actually matter.</p>
+                        <p>End-to-end, the AI-driven scheduler beats classical heuristics (max-CQI, proportional fairness, round-robin) by 5&ndash;25% on throughput and downstream application metrics, all on real srsRAN hardware.</p>
+                    </div>
+                </details>
+            </article>
+        </section>
+
+        <section id="patents">
+            <h2>Patents</h2>
+            <ul class="patent-list">
+                <li>
+                    <a href="https://patents.google.com/patent/WO2025014678A1" target="_blank" rel="noopener">Variable-Length CSI Feedback via Encoder Compression and Output Masks</a>
+                    <span class="patent-id">WO2025014678A1</span>
+                </li>
+                <li>
+                    <a href="https://patents.google.com/patent/US20240267794A1/en" target="_blank" rel="noopener">Intelligent Control for Cellular Radio Access Networks</a>
+                    <span class="patent-id">US20240267794A1</span>
+                </li>
+                <li>
+                    <a href="https://patents.google.com/patent/WO2024064329A1/en" target="_blank" rel="noopener">Reinforcement Learning-based Rate Control for End-to-End Neural Network based Video Compression</a>
+                    <span class="patent-id">WO2024064329A1</span>
+                </li>
+                <li>
+                    <a href="https://patents.google.com/patent/WO2024049627A1/en" target="_blank" rel="noopener">Video Compression for Both Machine and Human Consumption Using a Hybrid Framework</a>
+                    <span class="patent-id">WO2024049627A1</span>
+                </li>
+                <li>
+                    <a href="https://patents.google.com/patent/WO2023122077A1/en" target="_blank" rel="noopener">Temporal Attention-Based Neural Networks for Video Compression</a>
+                    <span class="patent-id">WO2023122077A1</span>
+                </li>
             </ul>
         </section>
-        <section id="projects">
-            <h2>Ongoing Projects</h2>
-            <h3>Learning Algorithms for Restless Multi-Armed Bandits</h3>
-            <p>Developing index policy learning algorithms for preference-feedback RMAB settings and providing regret bounds.</p>
-            <h3>Autonomous Navigation of Comma Body Robot</h3>
-            <p>Using RL and vision-based VQ-VAE architectures for autonomous navigation challenges.</p>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <ol class="timeline">
+                <li>
+                    <div class="role">
+                        <h3>Applied Scientist Intern <span class="company">&middot; Typeface AI</span></h3>
+                        <p class="when">Palo Alto, CA &middot; Jun 2025 &ndash; Aug 2025</p>
+                    </div>
+                    <ul>
+                        <li>Adapted a latent-preference inference approach from academic research to Typeface&rsquo;s marketing-content use cases &mdash; personalizing future LLM generations from users&rsquo; past edits, without retraining the base model.</li>
+                        <li>Built synthetic datasets and ran offline experiments to validate the approach and pin down parameter choices.</li>
+                        <li>Shipped the personalization logic into the production codebase and deployed it to beta behind a feature flag, awaiting A/B testing.</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="role">
+                        <h3>Research Intern, AI Lab <span class="company">&middot; InterDigital</span></h3>
+                        <p class="when">Los Altos, CA &middot; Mar&ndash;Aug 2021, May&ndash;Aug 2022</p>
+                    </div>
+                    <ul>
+                        <li>Worked on deep-learning-based video compression for live streaming.</li>
+                        <li>Improved inter-frame prediction with convolutional-recurrent blocks and attention mechanisms.</li>
+                        <li>Built an RL rate-controller for end-to-end neural video compression (now a patent).</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="role">
+                        <h3>Deep Learning Intern <span class="company">&middot; Roche</span></h3>
+                        <p class="when">Little Falls, NJ &middot; May 2020 &ndash; Aug 2020</p>
+                    </div>
+                    <ul>
+                        <li>Weakly-supervised deep learning on gigapixel histopathology images for cancer detection (ResNet34 encoder + RNN aggregator).</li>
+                        <li>Hit 99.3% AUC on an in-house kidney-cancer dataset; presented to the pRED Innovation Center data-science team in New York.</li>
+                    </ul>
+                </li>
+            </ol>
         </section>
-        <section id="work-experience">
-    <h2>Work Experience</h2>
-    <h3>Research Intern, AI Lab – InterDigital</h3>
-    <p><strong>Los Altos, CA</strong> | <em>Mar 2021 - Aug 2021; May 2022 - Aug 2022</em></p>
-    <ul>
-        <li>Worked on deep learning-based video compression for live streaming applications.</li>
-        <li>Improved existing models by adding convolutional-recurrent blocks and attention mechanisms into the inter-frame prediction branch.</li>
-        <li>Built a reinforcement learning-based rate controller for deep learning-based video compression schemes.</li>
-    </ul>
-    <h3>Deep Learning Intern – Roche</h3>
-    <p><strong>Little Falls, NJ</strong> | <em>May 2020 - Aug 2020</em></p>
-    <ul>
-        <li>Performed weakly supervised deep learning on gigapixel histopathology images for cancer detection using ResNet34 and RNN.</li>
-        <li>Achieved an AUC metric of 99.3% on an in-house kidney cancer dataset.</li>
-        <li>Presented results to the Data Science team at the Pharmaceutical Research and Early Development (pRED) Innovation Center.</li>
-    </ul>
-</section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:ujwald36@tamu.edu">ujwald36@tamu.edu</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/ujwal-dinesha">linkedin.com/in/ujwal-dinesha</a></p>
+            <p>The fastest way to reach me is email. I&rsquo;m always happy to chat about RL, LLM post-training, bandits, or robotics.</p>
+            <ul class="contact-list">
+                <li><span>Email</span><a href="mailto:ujwald36@tamu.edu">ujwald36@tamu.edu</a></li>
+                <li><span>LinkedIn</span><a href="https://linkedin.com/in/ujwal-dinesha" target="_blank" rel="noopener">linkedin.com/in/ujwal-dinesha</a></li>
+                <li><span>GitHub</span><a href="https://github.com/flash-36" target="_blank" rel="noopener">github.com/flash-36</a></li>
+            </ul>
         </section>
     </main>
+
     <footer>
-        <p>© 2024 Ujwal Dinesha</p>
+        <p>&copy; 2026 Ujwal Dinesha &middot; built with care, hosted on GitHub Pages</p>
     </footer>
 </body>
 </html>
