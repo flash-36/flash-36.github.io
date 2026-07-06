@@ -25,11 +25,11 @@
     <main>
         <section id="top" class="hero">
             <div class="hero-text">
-                <p class="eyebrow">Ph.D. Candidate · Texas A&amp;M University</p>
+                <p class="eyebrow">Ph.D. in Computer Engineering · Texas A&amp;M University</p>
                 <h1>Ujwal Dinesha</h1>
                 <p class="tagline">
                     I work on <strong>reinforcement learning</strong> &mdash; from post-training large language models
-                    to learning policies for restless bandits and robots. Advised by
+                    to learning policies for restless bandits and robots. I defended my Ph.D. in July 2026, advised by
                     <a href="https://cesg.tamu.edu/faculty/srinivas-shakkottai/" target="_blank" rel="noopener">Dr. Srinivas Shakkottai</a>.
                 </p>
                 <p class="meta">
@@ -38,8 +38,9 @@
                     <span>ujwald36@tamu.edu</span>
                 </p>
                 <div class="socials">
+                    <a href="UjwalDinesha_Resume.pdf" target="_blank" class="btn">Resume</a>
                     <a href="mailto:ujwald36@tamu.edu" class="btn">Email</a>
-                    <a href="https://scholar.google.com/citations?user=ujwald" target="_blank" rel="noopener" class="btn">Scholar</a>
+                    <a href="https://scholar.google.com/citations?user=LXBE7KsAAAAJ" target="_blank" rel="noopener" class="btn">Scholar</a>
                     <a href="https://linkedin.com/in/ujwal-dinesha" target="_blank" rel="noopener" class="btn">LinkedIn</a>
                     <a href="https://github.com/flash-36" target="_blank" rel="noopener" class="btn">GitHub</a>
                 </div>
@@ -52,10 +53,12 @@
         <section id="about">
             <h2>About</h2>
             <p>
-                I&rsquo;m a fourth-year Ph.D. candidate in Computer Engineering at Texas A&amp;M, where I think a lot about
-                how learning agents make decisions under uncertainty. Lately that&rsquo;s meant chasing two threads in
-                parallel: <em>aligning</em> large language models cheaply at inference time, and <em>learning</em>
-                index policies for restless bandits with only preference feedback.
+                I recently defended my Ph.D. in Computer Engineering at Texas A&amp;M (July 2026), where I spent five years
+                thinking about how learning agents make decisions under uncertainty. My research ran along a few threads:
+                <em>aligning</em> large language models cheaply at inference time, <em>building</em> LLM agents that learn
+                interactive games at test time (ARC-AGI-3), <em>learning</em> index policies for restless bandits from
+                preference feedback alone, and <em>teaching</em> robots to navigate and manipulate from demonstrations.
+                I&rsquo;m currently looking for applied / research scientist roles in LLM post-training and RL.
             </p>
             <p>
                 Before A&amp;M, I picked up an M.S. in Electrical Engineering at <a href="https://www.columbia.edu" target="_blank" rel="noopener">Columbia University</a>
@@ -72,8 +75,11 @@
                 <span class="chip">Preference Optimization</span>
                 <span class="chip">LLM Post-Training</span>
                 <span class="chip">Inference-Time Alignment</span>
+                <span class="chip">LLM Agents</span>
                 <span class="chip">Bandits / RMABs</span>
                 <span class="chip">Multi-Agent RL</span>
+                <span class="chip">Imitation Learning</span>
+                <span class="chip">LeRobot</span>
                 <span class="chip">Distributed GPU / HPC</span>
                 <span class="chip">Slurm</span>
                 <span class="chip">W&amp;B</span>
@@ -86,6 +92,26 @@
             <p class="section-intro">
                 Selected publications, each with a short writeup. Click any entry to expand the blog-style notes.
             </p>
+
+            <article class="paper">
+                <details>
+                    <summary>
+                        <div class="paper-head">
+                            <span class="venue">Ph.D. thesis · 2026</span>
+                            <h3>ARC-SCOPE &amp; DISH: Agentic Harnesses for ARC-AGI-3</h3>
+                            <p class="authors"><strong>U. Dinesha</strong>, B. Sai, S. Aamir</p>
+                            <div class="paper-links">
+                                <span class="expand-hint">Read notes &darr;</span>
+                            </div>
+                        </div>
+                    </summary>
+                    <div class="writeup">
+                        <p><strong>TL;DR.</strong> ARC-AGI-3 drops an agent into interactive grid games with hidden mechanics, sparse rewards, and a tight interaction budget. The open secret of the benchmark is that the <em>harness</em> &mdash; the scaffold of tools, memory, and control logic around the LLM &mdash; matters as much as the model. ARC-SCOPE is a testbed that finally lets you compare harnesses fairly: same environments, same representations, same token / wall-clock budgets.</p>
+                        <p>Within it we compared reactive analyzers, multi-agent orchestrators, and executable-world-model agents, and built <em>DISH</em> &mdash; a deterministic information-state harness that maintains a programmatic world model, verifies it against observed transitions, and plans through it with a thin event-driven controller, designed for sub-30B models.</p>
+                        <p>The result is a capability&ndash;efficiency split: the strongest frontier-style baseline tops out at 36/37 levels, while DISH clears 28&ndash;31 levels at roughly half the tokens per level (&asymp;20M vs. &asymp;43M). Everything runs on vLLM with FP8, from a single-GPU Qwen-27B up to GLM on an 8&times;H200 node.</p>
+                    </div>
+                </details>
+            </article>
 
             <article class="paper">
                 <details>
@@ -199,6 +225,25 @@
                     </div>
                 </details>
             </article>
+
+            <article class="paper">
+                <details>
+                    <summary>
+                        <div class="paper-head">
+                            <span class="venue">Robotics · ongoing</span>
+                            <h3>Robot Learning: Autonomous Navigation &amp; Dexterous Manipulation</h3>
+                            <p class="authors"><strong>U. Dinesha</strong> and mentored undergraduates, Texas A&amp;M</p>
+                            <div class="paper-links">
+                                <span class="expand-hint">Read notes &darr;</span>
+                            </div>
+                        </div>
+                    </summary>
+                    <div class="writeup">
+                        <p><strong>TL;DR.</strong> Two hands-on threads outside the paper mill. First, navigation on the comma body robot: pure imitation learning with a VQ-GAN visual tokenizer feeding a GPT-2-style transformer that doubles as policy and world model. Trained on teleoperation laps I collected around the lab, the robot autonomously repeats those laps end-to-end.</p>
+                        <p>Second, manipulation with LeRobot and SO-101 arms, where I mentored an undergraduate team training ACT (from the ALOHA paper), Diffusion Policy, and &pi;&#8320;-style policy architectures on real hardware.</p>
+                    </div>
+                </details>
+            </article>
         </section>
 
         <section id="patents">
@@ -270,6 +315,7 @@
             <p>The fastest way to reach me is email. I&rsquo;m always happy to chat about RL, LLM post-training, bandits, or robotics.</p>
             <ul class="contact-list">
                 <li><span>Email</span><a href="mailto:ujwald36@tamu.edu">ujwald36@tamu.edu</a></li>
+                <li><span>Resume</span><a href="UjwalDinesha_Resume.pdf" target="_blank">UjwalDinesha_Resume.pdf</a></li>
                 <li><span>LinkedIn</span><a href="https://linkedin.com/in/ujwal-dinesha" target="_blank" rel="noopener">linkedin.com/in/ujwal-dinesha</a></li>
                 <li><span>GitHub</span><a href="https://github.com/flash-36" target="_blank" rel="noopener">github.com/flash-36</a></li>
             </ul>
